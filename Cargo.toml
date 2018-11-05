@@ -8,6 +8,7 @@ license = "MIT"
 readme = "README.md"
 keywords = ["streams", "read", "write", "insert"]
 categories = ["data-structures"]
+documentation = "https://docs.rs/insert_multiple"
 
 
 [dependencies]
