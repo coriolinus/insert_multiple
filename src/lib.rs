@@ -20,6 +20,7 @@ where
     R: Read,
     W: Write,
 {
+    /// create a new inserter with the specified origin document and target
     pub fn new(origin: R, target: W) -> Inserter<'i, R, W> {
         Inserter {
             origin: origin,
@@ -28,11 +29,13 @@ where
         }
     }
 
+    /// insert the source document into the output document at the given origin index
     pub fn insert<I: 'i + Read>(mut self, position: usize, source: I) -> Self {
         self.insertions.insert(position, Box::new(source));
         self
     }
 
+    /// execute this inserter, consuming it
     pub fn execute(mut self) -> io::Result<()> {
         let mut input_index: usize = 0;
         let mut buffer = [0_u8; BUFFER_SIZE];
