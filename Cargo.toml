@@ -1,6 +1,6 @@
 [package]
 name = "insert_multiple"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Peter Goodspeed-Niklaus <peter.r.goodspeedniklaus@gmail.com>"]
 description = "insert multiple items into a stream in reasonable runtime"
 repository = "https://github.com/coriolinus/insert_multiple"
