@@ -23,9 +23,9 @@ where
     /// create a new inserter with the specified origin document and target
     pub fn new(origin: R, target: W) -> Inserter<'i, R, W> {
         Inserter {
-            origin: origin,
+            origin,
             insertions: BTreeMap::new(),
-            target: target,
+            target,
         }
     }
 

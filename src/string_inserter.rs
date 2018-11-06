@@ -32,7 +32,7 @@ impl<'o, 'i> StringInserter<'o, 'i> {
     /// create a new inserter with the specified origin document and target
     pub fn new(origin: &'o str) -> StringInserter<'o, 'i> {
         StringInserter {
-            origin: origin,
+            origin,
             insertions: Insertions::new(),
         }
     }
